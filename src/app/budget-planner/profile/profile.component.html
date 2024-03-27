@@ -1,0 +1,60 @@
+<app-side-nav></app-side-nav>
+
+<div class="container">
+
+  <h1 class="title">Modifier mon profil</h1>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="grid">
+      <div class="form-group a">
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name" type="text" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group b">
+        <label for="age">Age:</label>
+        <input id="age" formControlName="age" type="number" placeholder="Enter your age" required>
+      </div>
+
+      <div class="form-group email-group">
+        <label for="dob">Date of Birth:</label>
+        <input id="dob" formControlName="dob" type="date" placeholder="Select your date of Birth" required>
+      </div>
+
+      <div class="form-group phone-group">
+        <label for="gender">Gender:</label>
+        <select class="form-group"  id="gender" formControlName="gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" type="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="occupation">Occupation:</label>
+        <input id="occupation" formControlName="occupation" type="text" placeholder="Enter your occupation" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact:</label>
+        <input id="contact" formControlName="contact" type="text" placeholder="Enter your contact number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input id="address" formControlName="address" type="text" placeholder="Enter your address" required>
+      </div>
+    </div>
+
+
+
+    <div class="button-container">
+      <button class="submit">Save</button>
+    </div>
+  </form>
+
+</div>
